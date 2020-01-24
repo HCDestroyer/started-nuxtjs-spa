@@ -1,7 +1,7 @@
 {
   "name": "started-nuxtjs",
   "version": "1.0.0",
-  "description": "Project started for nuxtsjs mode SPA",
+  "description": "Project started for nuxtjs mode SPA",
   "author": "Angel Calán &lt;hcdestroyer@hacsmartech.com&gt;",
   "private": true,
   "scripts": {

@@ -1,6 +1,6 @@
 # started-nuxtjs
 
-> Project started for nuxtsjs mode SPA
+> Project started for nuxtjs mode SPA
 
 ## Build Setup
 
