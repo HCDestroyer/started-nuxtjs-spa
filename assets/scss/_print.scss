@@ -1,0 +1,45 @@
+@media print 
+  {
+  /*#printMe
+  {
+    zoom: 0.75;
+    position: relative;
+    margin-left: -160px;    
+    /*margin-left: 160px;*/
+    /*-ms-transform: rotateZ(-90deg); /* IE 9 */
+      /*-webkit-transform: rotateZ(-90deg); /* Safari */
+      /*transform: rotateZ(-90deg); /* Standard syntax */
+  /*}*/
+    html
+    {
+      font-family: Roboto,sans-serif;
+      line-height: 1.5!important;
+    }
+    table.v-table thead tr 
+    {
+      height: auto!important;
+    }
+    table.v-table tbody td:first-child, table.v-table tbody td:not(:first-child), table.v-table tbody th:first-child, table.v-table tbody th:not(:first-child), table.v-table thead td:first-child, table.v-table thead td:not(:first-child), table.v-table thead th:first-child, table.v-table thead th:not(:first-child) {
+      padding: 0 24px!important;
+    }
+    table.v-table tbody td 
+    {
+        font-weight: 400!important;
+        font-size: 13px!important;
+    }
+    table.v-table tbody td, table.v-table tbody th {
+      height: 10px!important;
+    }
+    td.text-xs-right.dst {
+    /* padding: 0px!important; */
+        width: 10px!important;
+    }
+    .v-card
+    {
+      box-shadow: none!important;
+    }
+    .w-75
+    {
+      width: 75% !important;
+    }
+  }

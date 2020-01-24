@@ -1,0 +1,28 @@
+.v-btn--contained {
+    box-shadow: 0px 2px 4px -1px rgba(62,57,107,.10), 0px 4px 5px 0px rgba(62,57,107,.22), 0px 1px 10px 0px rgba(62,57,107,.18) !important;
+}
+.v-btn--active.v-btn 
+{
+    border-radius: 4px!important;
+}
+.theme--dark.btn-app.v-btn.v-btn--disabled {
+    color: #9e9e9ee8 !important;
+    background-color: #e0e0e0 !important;
+}
+.theme--dark.btn-app.v-btn.v-btn--disabled:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined) {
+    background-color: rgba(0, 0, 0, 0.12) !important; }
+
+.v-btn--br 
+{
+    bottom: 0!important;
+    right: 16px!important;
+    position: fixed!important;
+    margin: 0 0 16px 16px!important;
+}
+.v-btn--bl 
+{
+    bottom: 0!important;
+    left: 16px!important;
+    position: fixed!important;
+    margin: 0 0 16px 16px!important;
+}

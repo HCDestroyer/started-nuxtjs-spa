@@ -1,0 +1,37 @@
+/* Utilities */
+.text-small {
+  font-size: 12px;
+}
+// Social Color
+@each $color, $value in $social-colors {
+  .text-#{$color} {
+    @include text-color(social-color($color));
+  }
+}
+@each $color, $value in $personalised-colors {
+	.#{$color}--text {
+		color: personalised-colors($color) !important;
+  }
+}
+
+@each $color, $value in $social-colors {
+  .bg-#{$color} {
+    background: social-color($color);
+  }
+}
+
+@each $color, $value in $theme-gradient-colors {
+	.bg-gradient-#{$color} {
+		background: theme-gradient-color($color) !important;
+  }
+}
+@each $color, $value in $theme-gradient-colors-rgba{
+  .bg-gradient-#{$color}-rgba {
+		background: theme-gradient-color-rgba($color) !important;
+	}
+}
+@each $color, $value in $theme-gradient-colors-text {
+	.bg-gradient-#{$color}--text {
+		color: theme-gradient-color-text($color) !important;
+  }
+}
