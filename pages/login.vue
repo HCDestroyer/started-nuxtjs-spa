@@ -96,6 +96,18 @@
 				<LoginCarosel/>
         	</v-col>
         </v-row>
+		<v-snackbar
+            v-model="snackbar.status"
+            :color="snackbar.type"
+            :timeout="snackbar.time"
+            multi-line>
+            {{ snackbar.text }}
+            <v-btn
+                icon
+                @click="snackbar.status = false">
+                <v-icon>mdi-close</v-icon>
+            </v-btn>
+        </v-snackbar>      
 	</v-container>
 </template>
 <script>
@@ -161,9 +173,13 @@ export default
 							this.mode_message.error = true; 
 							break;
 					}
+				}
+				else
+				{
+					this.pushMessage(this.trans('check_connection_server'),'error');
 				}	
 			})
-			 . finally((fn) => 
+			.finally((fn) => 
 			{
 				this.waiting = false;
 			});

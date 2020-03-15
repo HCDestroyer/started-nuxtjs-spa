@@ -24,7 +24,7 @@
                                     v-else
                                     size="100px">
                                     <img
-                                        :src="(auth.user)?app_asset+'/'+auth.user.src:'/imgs/user.svg'"
+                                        :src="(auth.user)   ? app_asset + auth.user.src: '/imgs/user.svg'"
                                         :alt="(auth.user)?auth.user.fname:''">
                                 </v-avatar>
                             </div>

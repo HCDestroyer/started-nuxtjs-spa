@@ -27,6 +27,7 @@ export default {
     permission: 'Permiso',
     permissions: 'Permisos',
     started_password: 'La contraseña inicial es: secret',
+    check_connection_server: 'Verificar la conexión al servidor',
 
     es_GT:'Español - Guatemala',
     en_US: 'Ingles - EE.UU',
