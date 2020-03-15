@@ -157,7 +157,7 @@
                         v-for="i in 8"
                         :key="i">
                         <v-skeleton-loader
-                            type="card"
+                            type="list-item-three-line"
                             class="mx-auto"
                         ></v-skeleton-loader>
                     </v-col>
@@ -243,39 +243,34 @@
                                             class="py-0">
                                             <List :item="item"/>
                                         </v-card-text>
-                                        <v-card-text
-                                            class="py-0">
-                                            <v-row
-                                                align="center"
-                                                justify="center">
-                                                <v-col
-                                                    v-show="$auth.user.access.includes(`roles_permissions`)">
-                                                    <v-btn 
-                                                        @click="rolePermissions(item.id)"
-                                                        color="teal"
-                                                        block
-                                                        rounded
-                                                        text 
-                                                        dark>
-                                                        <v-icon>mdi-shield-lock</v-icon>
-                                                        {{trans('permissions')}}
-                                                    </v-btn>
-                                                </v-col>
-                                                <v-col
-                                                    v-show="$auth.user.access.includes(`roles_users`)">
-                                                    <v-btn 
-                                                        @click="roleUsers(item.id)"
-                                                        color="purple darken-4"
-                                                        block
-                                                        rounded
-                                                        text 
-                                                        dark>
-                                                        <v-icon>mdi-clipboard-account-outline</v-icon>
-                                                        {{trans('users')}}
-                                                    </v-btn>
-                                                </v-col>
-                                            </v-row>
-                                        </v-card-text>
+                                        <v-divider v-if="$auth.user.access.includes(`roles_permissions`)  || $auth.user.access.includes(`roles_users`)"/>
+                                        <v-bottom-navigation
+                                            v-if="$auth.user.access.includes(`roles_permissions`)  || $auth.user.access.includes(`roles_users`)"
+                                            :value="0"
+                                            grow
+                                            color="teal"
+                                            class="shadow-0">
+                                            <v-btn 
+                                                v-if="$auth.user.access.includes(`roles_permissions`)"
+                                                @click="rolePermissions(item.id)"
+                                                depressed 
+                                                dark>
+                                                <span>
+                                                    {{trans('permissions')}}
+                                                </span>
+                                                <v-icon>mdi-shield-lock</v-icon>
+                                            </v-btn>
+                                            <v-btn 
+                                                v-if="$auth.user.access.includes(`roles_users`)"
+                                                @click="roleUsers(item.id)"
+                                                depressed 
+                                                dark>
+                                                <span>
+                                                    {{trans('users')}}
+                                                </span>
+                                                <v-icon>mdi-clipboard-account-outline</v-icon>
+                                            </v-btn>
+                                        </v-bottom-navigation>
                                     </v-card>
                                 </v-hover>
                             </v-col>
@@ -293,7 +288,7 @@
                                         boilerplate
                                         flat
                                         ref="skeleton"
-                                        type="image"
+                                        type="list-item-three-line"
                                         class="mx-auto">
                                     </v-skeleton-loader>
                                     <v-card-title

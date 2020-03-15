@@ -111,7 +111,7 @@
         <v-col 
             cols="12"
             md="6">
-            <v-autocomplete
+            <v-select
                 v-model="user.gender"
                 :items="gender.list"
                 :readonly="gender.total<0?true:false"
@@ -131,10 +131,7 @@
                 :flat="flat"
                 item-value="key"
                 item-text="text"
-                small-chips
-                deletable-chips
-                item-color="indigo"
-                chips>
+                item-color="indigo">
                 <template v-slot:no-data>
                     <v-list-item>
                     <v-list-item-content>
@@ -144,10 +141,11 @@
                     </v-list-item-content>
                     </v-list-item>
                 </template>
-            </v-autocomplete>
+            </v-select>
         </v-col>
         <v-col cols="12">
             <v-text-field
+                type="date"
                 v-model="user.birth_day"
                 :label="trans('birth_date')+' | '+trans('birth_date_format')"
                 :error="!!required_value.birth_day"
