@@ -78,9 +78,22 @@ export default {
     },
     customers: {
         title: 'customers',
-        icon: 'mdi-clipboard-account-outline',
+        icon: 'mdi-account-box-outline',
         key: 'customers_index',
         actions: false,
         options: crud('customers')
+    },
+    app_configs: {
+        title: 'config',
+        icon: 'mdi-cogs',
+        key: 'app_configs',
+        actions: false,
+        options: [
+            {
+                title: 'edit',
+                icon: 'mdi-pencil',
+                key:  'app_configs_edit',
+            },
+        ]
     },
 };
