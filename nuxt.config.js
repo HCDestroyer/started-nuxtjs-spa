@@ -64,6 +64,10 @@ export default {
 		},
 		{ src: '@/plugins/filters' },
 		{ src: '@/plugins/moment' },
+		{
+			ssr: false,
+			src: '@/plugins/animated-number'
+		},
 	],
 	/*
 	** Nuxt.js dev-modules
